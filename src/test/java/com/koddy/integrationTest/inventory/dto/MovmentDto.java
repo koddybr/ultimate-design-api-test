@@ -59,4 +59,5 @@ public class MovmentDto {
     public void setInventories(List<InventoryDto> inventories) {
         this.inventories = inventories;
     }
+
 }

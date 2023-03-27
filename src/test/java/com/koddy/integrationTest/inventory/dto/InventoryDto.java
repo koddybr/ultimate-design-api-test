@@ -2,6 +2,7 @@ package com.koddy.integrationTest.inventory.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -28,6 +29,21 @@ public class InventoryDto {
     private Integer inventoryTypeId;
     private Integer familyId;
     private Integer unitId;
+
+    private Integer transferId;
+
+    private String outQuantity;
+
+    private Integer orderId;
+
+    private Integer areaId;
+
+    private Boolean external;
+    private String date;
+
+    private String quantity;
+
+    private BigDecimal price;
 
     public Integer getId() {
         return id;
@@ -99,6 +115,70 @@ public class InventoryDto {
 
     public void setUnitId(Integer unitId) {
         this.unitId = unitId;
+    }
+
+    public Integer getTransferId() {
+        return transferId;
+    }
+
+    public void setTransferId(Integer transferId) {
+        this.transferId = transferId;
+    }
+
+    public String getOutQuantity() {
+        return outQuantity;
+    }
+
+    public void setOutQuantity(String outQuantity) {
+        this.outQuantity = outQuantity;
+    }
+
+    public Integer getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
+    }
+
+    public Integer getAreaId() {
+        return areaId;
+    }
+
+    public void setAreaId(Integer areaId) {
+        this.areaId = areaId;
+    }
+
+    public Boolean getExternal() {
+        return external;
+    }
+
+    public void setExternal(Boolean external) {
+        this.external = external;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
     @Override

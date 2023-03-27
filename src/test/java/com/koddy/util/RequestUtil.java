@@ -11,4 +11,9 @@ public class RequestUtil {
     public static String generateDescription(){
         return "This is a description: "+ UUID.randomUUID();
     }
+
+//    public static Object wrapper (Object...) {
+//        Object o = new Object();
+//        o.
+//    }
 }

@@ -29,6 +29,11 @@ public class ApiConfiguration {
             Enviroment.getInstance().getHost() +
                     API + "/area/transfer";
 
+    // POST
+    public static final String INVENTORY_TRANSFER =
+            Enviroment.getInstance().getHost() +
+                    API + "/area/transfer";
+
     // INVENTORY OBSERVATION
     public static final String INVENTORY_OBSERVATION_ALL =
             Enviroment.getInstance().getHost() +
@@ -42,6 +47,10 @@ public class ApiConfiguration {
     public static final String INVENTORY_OBSERVATION_UPDATE =
             Enviroment.getInstance().getHost() +
                     INVENTORY_OBSERVATION + "/%s";
+
+    public static final String BUYOUT =
+            Enviroment.getInstance().getHost() +
+                    API + "/buyout/0";
 
     // CLIENT
     public static final String CLIENT = API + "/client" ;

@@ -1,20 +1,19 @@
 package com.koddy.factoryRequest;
 
+import com.koddy.constants.HttpMethod;
+
 public class FactoryRequest {
-    public static IRequest make (String requestType){
+    public static IRequest make (HttpMethod method){
         IRequest request;
 
-        switch (requestType.toLowerCase()){
-//            case "auth":
-//                request = new RequestAuth();
-//                break;
-            case "post":
+        switch (method){
+            case POST:
                 request = new RequestPOST();
                 break;
-            case "put":
+            case PUT:
                 request = new RequestPUT();
                 break;
-            case "delete":
+            case DELETE:
                 request= new RequestDELETE();
                 break;
             default:

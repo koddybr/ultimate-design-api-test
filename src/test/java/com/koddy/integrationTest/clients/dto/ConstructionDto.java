@@ -1,5 +1,10 @@
 package com.koddy.integrationTest.clients.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import java.util.Objects;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ConstructionDto {
 
     /**
@@ -17,6 +22,7 @@ public class ConstructionDto {
      */
     private Integer id;
     private String name;
+    private Integer statusId;
     private Integer clientId;
     private String amount;
     private String startDate;
@@ -86,5 +92,26 @@ public class ConstructionDto {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Integer getStatusId() {
+        return statusId;
+    }
+
+    public void setStatusId(Integer statusId) {
+        this.statusId = statusId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ConstructionDto that = (ConstructionDto) o;
+        return Objects.equals(name, that.name) && Objects.equals(amount, that.amount) && Objects.equals(description, that.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, amount, description);
     }
 }

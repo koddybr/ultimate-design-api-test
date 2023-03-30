@@ -80,7 +80,7 @@ public class ApiConfiguration {
                     CONSTRUCTION + "/%s";
     public static final String CONSTRUCTION_UPDATE =
             Enviroment.getInstance().getHost() +
-                    CONSTRUCTION + "/%s";
+                    CONSTRUCTION;
 
     // CLIENT
     public static final String ORDER = API + "/order" ;
@@ -95,7 +95,7 @@ public class ApiConfiguration {
                     ORDER + "/%s";
     public static final String ORDER_UPDATE =
             Enviroment.getInstance().getHost() +
-                    ORDER + "/%s";
+                    ORDER;
 
     // DISPATCH
     public static final String DISPATCH = API + "/dispatch" ;
@@ -107,10 +107,10 @@ public class ApiConfiguration {
                     DISPATCH;
     public static final String DISPATCH_GET =
             Enviroment.getInstance().getHost() +
-                    DISPATCH + "/%s";
+                    DISPATCH + "/%s/edit";
     public static final String DISPATCH_UPDATE =
             Enviroment.getInstance().getHost() +
-                    DISPATCH + "/%s";
+                    DISPATCH;
 
     // PRODUCT
     public static final String PRODUCT = API + "/product" ;
@@ -125,6 +125,21 @@ public class ApiConfiguration {
                     PRODUCT + "/%s";
     public static final String PRODUCT_UPDATE =
             Enviroment.getInstance().getHost() +
-                    PRODUCT + "/%s";
+                    PRODUCT;
+
+    // PRODUCT_TYPE
+    public static final String PRODUCT_TYPE = API + "/product_type" ;
+    public static final String PRODUCT_TYPE_ALL =
+            Enviroment.getInstance().getHost() +
+                    PRODUCT_TYPE;
+    public static final String PRODUCT_TYPE_STORE =
+            Enviroment.getInstance().getHost() +
+                    PRODUCT_TYPE;
+    public static final String PRODUCT_TYPE_GET =
+            Enviroment.getInstance().getHost() +
+                    PRODUCT_TYPE + "/%s/edit";
+    public static final String PRODUCT_TYPE_UPDATE =
+            Enviroment.getInstance().getHost() +
+                    PRODUCT_TYPE;
 
 }

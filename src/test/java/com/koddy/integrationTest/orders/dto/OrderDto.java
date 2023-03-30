@@ -1,7 +1,15 @@
 package com.koddy.integrationTest.orders.dto;
 
-public class OrderDto {
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.koddy.integrationTest.clients.dto.ConstructionDto;
+import com.koddy.integrationTest.products.dto.ProductDto;
 
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.Objects;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class OrderDto {
 
     /**
      *
@@ -128,8 +136,19 @@ public class OrderDto {
     private String startDate;
     private String estimatedDate;
     private Integer speccieId;
+    private Integer employeeId;
     private String venesta;
     private String description;
+
+    private String modified;
+
+    private Integer modifiedTypeId;
+
+    private ConstructionDto constructionDto;
+
+    private List<ProductDto> products;
+
+    private BigDecimal amount;
 
     public Integer getId() {
         return id;
@@ -217,5 +236,71 @@ public class OrderDto {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public ConstructionDto getConstructionDto() {
+        return constructionDto;
+    }
+
+    public void setConstructionDto(ConstructionDto constructionDto) {
+        this.constructionDto = constructionDto;
+    }
+
+    public Integer getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public String getModified() {
+        return modified;
+    }
+
+    public void setModified(String modified) {
+        this.modified = modified;
+    }
+
+    public Integer getModifiedTypeId() {
+        return modifiedTypeId;
+    }
+
+    public void setModifiedTypeId(Integer modifiedTypeId) {
+        this.modifiedTypeId = modifiedTypeId;
+    }
+
+    public List<ProductDto> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<ProductDto> products) {
+        this.products = products;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        OrderDto orderDto = (OrderDto) o;
+        return Objects.equals(statusId, orderDto.statusId) &&
+                Objects.equals(name, orderDto.name) &&
+                Objects.equals(contractTypeId, orderDto.contractTypeId) &&
+                Objects.equals(constructionId, orderDto.constructionId) &&
+                Objects.equals(orderTypeId, orderDto.orderTypeId) &&
+                Objects.equals(description, orderDto.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(statusId, name, contractTypeId, constructionId, orderTypeId, description);
     }
 }

@@ -1,5 +1,10 @@
 package com.koddy.integrationTest.clients.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import java.util.Objects;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ClientDto {
     /**
      * TEMPLATE
@@ -14,6 +19,7 @@ public class ClientDto {
      * }
      */
     private Integer id;
+    private String nit;
     private String name;
     private String address;
     private String legalRepresentative;
@@ -75,5 +81,26 @@ public class ClientDto {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getNit() {
+        return nit;
+    }
+
+    public void setNit(String nit) {
+        this.nit = nit;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ClientDto clientDto = (ClientDto) o;
+        return Objects.equals(nit, clientDto.nit) && Objects.equals(name, clientDto.name) && Objects.equals(description, clientDto.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nit, name, description);
     }
 }

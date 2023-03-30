@@ -1,5 +1,12 @@
 package com.koddy.integrationTest.orders.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.koddy.integrationTest.products.dto.ProductDto;
+
+import java.util.List;
+import java.util.Objects;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DispatchDto {
     /**
      * TEMPLATE
@@ -54,6 +61,9 @@ public class DispatchDto {
     private Integer id;
     private Integer constructionId;
     private String description;
+    private String date;
+
+    private List<ProductDto> products;
 
     public Integer getId() {
         return id;
@@ -77,5 +87,34 @@ public class DispatchDto {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public List<ProductDto> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<ProductDto> products) {
+        this.products = products;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DispatchDto that = (DispatchDto) o;
+        return Objects.equals(constructionId, that.constructionId) && Objects.equals(description, that.description) && Objects.equals(date, that.date);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(constructionId, description, date);
     }
 }

@@ -1,7 +1,7 @@
 package com.koddy.factoryRequest;
 
 import com.koddy.factoryRequest.dto.LoginDto;
-import com.koddy.util.ApiConfiguration;
+import com.koddy.request.ApiConfiguration;
 import com.koddy.util.Enviroment;
 import com.koddy.util.JsonUtil;
 import io.restassured.http.ContentType;

@@ -1,4 +1,6 @@
-package com.koddy.util;
+package com.koddy.request;
+
+import com.koddy.util.Enviroment;
 
 public class ApiConfiguration {
 

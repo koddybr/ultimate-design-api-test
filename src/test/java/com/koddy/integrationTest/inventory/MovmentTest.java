@@ -10,7 +10,7 @@ import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static com.koddy.util.ApiConfiguration.INVENTORY_MOVMENT;
+import static com.koddy.request.ApiConfiguration.INVENTORY_MOVMENT;
 
 public class MovmentTest {
     protected Response response;

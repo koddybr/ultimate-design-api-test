@@ -3,9 +3,7 @@ package com.koddy.integrationTest.clients;
 import com.koddy.constants.HttpMethod;
 import com.koddy.factoryRequest.FactoryRequest;
 import com.koddy.factoryRequest.RequestInfo;
-import com.koddy.integrationTest.clients.dto.ClientDto;
 import com.koddy.integrationTest.clients.dto.ConstructionDto;
-import com.koddy.integrationTest.clients.supplier.ClientSupplier;
 import com.koddy.integrationTest.clients.supplier.ConstructionSupplier;
 import com.koddy.request.CreateRequest;
 import com.koddy.util.JsonUtil;
@@ -18,8 +16,7 @@ import org.junit.jupiter.api.Test;
 
 import java.net.HttpURLConnection;
 
-import static com.koddy.util.ApiConfiguration.*;
-import static com.koddy.util.ApiConfiguration.CLIENT_STORE;
+import static com.koddy.request.ApiConfiguration.*;
 
 public class ConstructionTest {
 

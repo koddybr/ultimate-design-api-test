@@ -7,7 +7,7 @@ import com.koddy.integrationTest.buyout.dto.BuyoutDto;
 import com.koddy.integrationTest.buyout.supplier.BuyoutSupplier;
 import com.koddy.integrationTest.inventory.dto.InventoryDto;
 import com.koddy.integrationTest.inventory.supplier.InventorySupplier;
-import com.koddy.util.ApiConfiguration;
+import com.koddy.request.ApiConfiguration;
 import com.koddy.util.JsonUtil;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;

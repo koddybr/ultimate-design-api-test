@@ -18,8 +18,7 @@ import org.junit.jupiter.api.Test;
 
 import java.net.HttpURLConnection;
 
-import static com.koddy.util.ApiConfiguration.*;
-import static com.koddy.util.ApiConfiguration.PRODUCT_UPDATE;
+import static com.koddy.request.ApiConfiguration.*;
 
 public class ProductTypeTest {
     protected Response response;

@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Assertions;
 
 import java.net.HttpURLConnection;
 
-import static com.koddy.util.ApiConfiguration.*;
+import static com.koddy.request.ApiConfiguration.*;
 
 public class InventoryTest {
     protected Response response;

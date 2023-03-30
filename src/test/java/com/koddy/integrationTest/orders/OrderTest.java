@@ -3,8 +3,6 @@ package com.koddy.integrationTest.orders;
 import com.koddy.constants.HttpMethod;
 import com.koddy.factoryRequest.FactoryRequest;
 import com.koddy.factoryRequest.RequestInfo;
-import com.koddy.integrationTest.inventory.dto.InventoryDto;
-import com.koddy.integrationTest.inventory.supplier.InventorySupplier;
 import com.koddy.integrationTest.orders.dto.OrderDto;
 import com.koddy.integrationTest.orders.supplier.OrderSupplier;
 import com.koddy.request.CreateRequest;
@@ -14,13 +12,11 @@ import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import java.net.HttpURLConnection;
 
-import static com.koddy.util.ApiConfiguration.*;
-import static com.koddy.util.ApiConfiguration.INVENTORY_STORE;
+import static com.koddy.request.ApiConfiguration.*;
 
 public class OrderTest {
     protected Response response;

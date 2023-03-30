@@ -5,7 +5,7 @@ import com.koddy.factoryRequest.FactoryRequest;
 import com.koddy.factoryRequest.RequestInfo;
 import com.koddy.integrationTest.inventory.dto.TransferDto;
 import com.koddy.integrationTest.inventory.supplier.TransferSupplier;
-import com.koddy.util.ApiConfiguration;
+import com.koddy.request.ApiConfiguration;
 import com.koddy.util.JsonUtil;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;

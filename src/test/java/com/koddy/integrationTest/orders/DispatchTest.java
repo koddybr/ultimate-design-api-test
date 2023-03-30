@@ -4,10 +4,7 @@ import com.koddy.constants.HttpMethod;
 import com.koddy.factoryRequest.FactoryRequest;
 import com.koddy.factoryRequest.RequestInfo;
 import com.koddy.integrationTest.orders.dto.DispatchDto;
-import com.koddy.integrationTest.orders.dto.OrderDto;
 import com.koddy.integrationTest.orders.supplier.DispatchSupplier;
-import com.koddy.integrationTest.orders.supplier.OrderSupplier;
-import com.koddy.integrationTest.products.dto.ProductDto;
 import com.koddy.request.CreateRequest;
 import com.koddy.util.JsonUtil;
 import com.koddy.util.RequestUtil;
@@ -18,13 +15,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.net.HttpURLConnection;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-import static com.koddy.util.ApiConfiguration.*;
-import static com.koddy.util.ApiConfiguration.ORDER_UPDATE;
+import static com.koddy.request.ApiConfiguration.*;
 
 public class DispatchTest {
     protected Response response;
